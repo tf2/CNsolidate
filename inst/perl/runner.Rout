@@ -1,0 +1,3 @@
+Error in library(SLEDGE, lib.loc = "jkj") : 
+  no library trees found in 'lib.loc'
+Execution halted

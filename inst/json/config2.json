@@ -1,0 +1,160 @@
+{
+   "Details" : {
+      "URL" : "http://sledge-combined.sourceforge.net/",
+      "Settings" : "Default Configuration File",
+      "Version" : "Version 1.0",
+      "Pipeline" : "Combinatorial change point detection --- SLEDGE",
+      "Email" : "tf2@sanger.ac.uk",
+      "Author" : "Tomas William Fitzgerald"
+   },
+   "Order" : {
+   	  "1" : "spline",
+      "2" : "wave",
+      "3" : "sep",
+      "4" : "call",
+      "5" : "FeObs",
+      "6" : "gap",
+      "7" : "overlap",
+      "9" : "weight",
+      "10": "image"
+   }, 
+   "Process" : {
+      "inputdir" : "/nfs/ddd0/Tom/SplitArrays2/",
+      "chuck" : 10,
+      "project" : "team70",
+      "configloc" : "./config.json",
+      "lsf" : 1,
+      "gold" : "../data/hg19_CompleteVariation.bed",
+      "gapfile" : "../data/gaps_hg19.txt",
+      "outputdir" : "/nfs/ddd0/Tom/SplitArrays2/OUT/",
+      "libLoc" : "/nfs/users/nfs_t/tf2/R/x86_64-unknown-linux-gnu-library/dev2/",
+      "runnerloc" : "/nfs/ddd0/Tom/SplitArrays2/runner.R",
+      "formatted" : "bed",
+      "que" : "long"
+   },  
+   "Norm" : {
+      "wFac" : 1.2,
+      "sFact" : 4.5,
+      "sthes" : 0.68,
+      "sknot" : 1000,
+      "sIt" : 5
+   },
+   "Combine" : {
+      "gRatio" : 0.5,
+      "lest" : 250,
+      "gest" : 200,
+      "Consenues" : 2,
+      "minProbe" : 3,
+      "absRatio" : 0.3,
+      "lRatio" : 0.4
+   },
+   "Algorithms" : {
+      "dnacopy" : 1,
+      "safe" : 0,
+      "bcp" : 0,
+      "SMAP" : 1,
+      "CNCP" : 1,
+      "ADM2" : 1,
+      "GADA" : 1,
+      "walk" : 0,
+      "fast" : 0,
+      "fsegment" : 1,
+      "SMUG" : 1
+   },
+   "Sep" : {
+      "dnacopy" : 1,
+      "safe" : 1,
+      "bcp" : 1,
+      "SMAP" : 1,
+      "CNCP" : 1,
+      "ADM2" : 0,
+      "GADA" : 0,
+      "walk" : 0,
+      "fast" : 1,
+      "fsegment" : 1,
+      "SMUG" : 1
+   },
+   "Settings" : {
+      "safe" : {
+         "mL" : 3,
+         "mR" : 0.3
+   	  },
+      "dnacopy" : {
+         "trim" : 0.025,
+         "mL" : 3,
+         "smR" : 2,
+         "sSD" : 2,
+         "mR" : 0.3,
+         "oSD" : 4
+      },
+      "bcp" : {
+         "probC" : 0.05,
+         "p1" : 0.95,
+         "mL" : 3,
+         "p2" : 0.01,
+         "pT" : 3,
+         "mR" : 0.3,
+         "resolution" : 1000
+      },
+      "SMAP" : {
+         "probC" : 0.05,
+         "p1" : 0.95,
+         "mL" : 3,
+         "p2" : 0.01,
+         "pT" : 3,
+         "mR" : 0.3,
+         "resolution" : 1000
+      },
+      "CNCP" : {
+         "n" : 2,
+         "a" : 3,
+         "dist" : 1000,
+         "absc" : 0.3,
+         "prob" : 0.4,
+         "fac" : 3
+      },
+      "ADM2" : {
+         "t" : 5,
+         "np" : 3,
+         "mr" : 0.3,
+         "fact" : 3
+      },
+      "GADA" : {
+         "T" : 3,
+         "mL" : 3,
+         "alpha" : 0.1,
+         "mR" : 0.3
+      },
+      "walk" : {
+         "tr2" : 2,
+         "w2" : 500,
+         "s" : 500,
+         "l1" : 25,
+         "l2" : 5,
+         "mR" : 0.3,
+         "w3" : 10,
+         "tr1" : 2,
+         "w1" : 100
+      },
+      "SMUG" : {
+         "probC" : 0.05,
+         "p1" : 0.95,
+         "mL" : 3,
+         "p2" : 0.01,
+         "pT" : 3,
+         "mR" : 0.3,
+         "resolution" : 1000
+      },
+      "fsegment" : {
+         "mL" : 3,
+         "mR" : 0.3,
+         "sL" : 1000,
+         "cpP" : 2
+      },
+      "fast" : {
+         "mL" : 3,
+         "pT" : 1,
+         "mR" : 0.3
+      }
+   }
+}

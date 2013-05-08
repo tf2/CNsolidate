@@ -1,0 +1,11 @@
+Package: CNsolidate
+Type: Package
+Title: Change-point detection
+Version: 1.2
+Date: 2011-03-05
+Author: Tomas William Fitzgerald
+Maintainer: <tf2@sanger.ac.uk>
+Depends:
+Description: Multiple algorithm approach to change-point detection
+License: Artistic
+Packaged: 2011-05-03 22:40:54 UTC; tf2

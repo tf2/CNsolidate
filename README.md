@@ -65,6 +65,7 @@ The final CNV calls are contained in a file with "_FinalReport.txt" extension wh
 # Example
 ```bash
 dir=`mktemp -d -t 'mytmpdir'` && cd $dir
+R
 ```
 
 ```R
@@ -73,7 +74,7 @@ library(CNsolidate)
 
 # generate some test data
 outputdir = getwd()
-inputname = paste(outputdir, "/testData.txt")
+inputname = paste(outputdir, "/testData.txt", sep="")
 testchr = 1
 testlength = 20000
 testmean = 0.001

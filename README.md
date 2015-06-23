@@ -17,11 +17,11 @@ set = settings()
 
 Run all desired normalisation steps:
 
-for (x in 1:length(set$norm)) {
+`for (x in 1:length(set$norm)) {
       if (set$norm[x] == 1) {
         result <- try( do.call( names(set$norm[x]), list(set) ) )
       }
-}
+}`
 
 
 Run all desired CNV detection algorithms:

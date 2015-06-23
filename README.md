@@ -4,15 +4,15 @@ CNsolidate
 CNV detection using 12 independent change point detection algorithms and an expert voting system
 
 All execution methods and parameter defintions are controlled by a single configuration object
-
+```R
 library(CNsolidate)
-
+```
 # CONFIGURATION
 
 Get a config object with defualt parameters
-
+```R
 set = settings()
-
+```
 # EXECUTION
 
 Run all desired normalisation steps:

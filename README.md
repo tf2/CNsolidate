@@ -3,7 +3,7 @@ CNsolidate
 
 CNV detection using 12 independent change point detection algorithms and an expert voting system
 
-See example at the bottom for complete walkthrough
+See example at the bottom for complete walkthrough using synthetic data
 
 # INSTALL
 Download zip file or pull master branch
@@ -32,6 +32,9 @@ set$files$file = <YOUR_INPUT_FILE>
 set$files$odir = <YOUR_OUTPUT_DIRECTORY>
 set$files$format = "fe"
 ```
+
+Note: format "fe" is for the Agilent feature extraction file format.
+Simple "bed" format also supported see walkthrough
 
 # EXECUTION
 
@@ -63,11 +66,12 @@ for (x in 1:length(set$combine)) {
 The final CNV calls are contained in a file with "_FinalReport.txt" extension which will be created in the ouput directory.
 
 # Example
+Make temp directory, cd and start R:
 ```bash
-dir=`mktemp -d -t 'mytmpdir'` && cd $dir
+mytmpdir=`mktemp -d 2>/dev/null || mktemp -d -t 'mytmpdir'` && cd $mytmpdir
 R
 ```
-
+Run a test is R using synthetic data example
 ```R
 # load library
 library(CNsolidate)
@@ -81,6 +85,8 @@ testmean = 0.001
 testsd = 0.2
 testproportion = 0.2
 testData = syn.genome(data.frame(testchr,testlength,testmean,testsd,testproportion))
+
+# write test data to file note: last column is a weight used for each probe (set all to 1 for this example)
 write.table(data.frame(testData$data,1), file=inputname, sep="\t", row.names=F, col.names=F, quote=F)
 
 # set default parameters

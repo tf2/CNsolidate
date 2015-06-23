@@ -23,7 +23,7 @@
 		"SMAP" = list("reso" = 1000, "pc" = 0.05, "p1" = 0.95, "p2" = 0.01, "mL" = 3, "mR" = 0.35, "pT" = 3),  			   				  				
 		"walk" = list("tr1" = 2, "len1"=25, "len2"=5, "wlen1"=100, "wlen2"=500, "siZ"=500, "mL" = 3, "pc" = 0.05, "mR" = 0.35, "pT" = 3  ),  	
    	
-   	"combine" =list("makeFObs" = 1,  "mapBreakc" = 1, "gap" = 1, "overlap" = 1, "derive.weights" = 1, "localp" = 1, "combin.image" = 1, "makeGff" = 1, "QC" = 1, "overlap3" =1),
+   	"combine" =list("makeFObs" = 1,  "mapBreakc" = 1, "gap" = 1, "overlap" = 1, "derive.weights" = 1, "localp" = 1, "combin.image" = 0, "makeGff" = 0, "QC" = 0, "overlap3" =0),
    		"combine.settings" =list("Consenues" = 2, "absRatio" = 0.3, "minProbe" = 3, "lRatio" = 0.4, "gRatio" = 0.5, "lest" = 250, "gest" = 200, "tfac" = 2, "adj" = 1, "level" = 400), 	
 	
 	"data" = NULL

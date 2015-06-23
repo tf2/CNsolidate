@@ -65,7 +65,7 @@ for (x in 1:length(set$combine)) {
 # OUTPUT
 The final CNV calls are contained in a file with "_FinalReport.txt" extension which will be created in the ouput directory.
 
-# Example
+# EXAMPLE WALKTHROUGH
 Make temp directory, cd and start R:
 ```bash
 mytmpdir=`mktemp -d 2>/dev/null || mktemp -d -t 'mytmpdir'` && cd $mytmpdir
@@ -119,6 +119,7 @@ plot(testData$data[,4], pch=20, ylim=c(-3,3))
 abline(v=cnv_calls$start_index, col="green")
 abline(v=cnv_calls$stop_index, col="red")
 ```
-
+# For the interested
+using the "testData$rep" variable (the locations of the inserted synthetic CNVs) one could compare the synthetic CNV locations to those detected by CNsolidate i.e. in the "cnv_calls" variable.
 
 

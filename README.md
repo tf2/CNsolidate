@@ -57,7 +57,7 @@ for (x in 1:length(set$algorithms)) {
 Run all desired combination, algorithm weighting, post processing and annotation steps:
 ```R
 for (x in 1:length(set$combine)) {
-      if (set$algorithms[x] == 1) {
+      if (set$combine[x] == 1) {
         result <- try( do.call( names(set$combine[x]), list(set) ) )
       }
 }
